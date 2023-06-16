@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: abhi-pod
+  labels:
+    app: my-app
+spec:
+  containers:
+    - name: my-container
+      image: abhiraj29/prabhi
+      ports:
+        - containerPort: 8000
