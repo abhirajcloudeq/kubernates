@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-abhi
+  namespace: ingress-nginx 
+  labels:
+    app: abhi-raj
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abhi-raj
+  template:
+    metadata:
+      labels:
+        app: abhi-raj
+    spec:
+       containers:
+        - name: abhicontainer
+          image: abhiraj29/ingress1
+          ports: 
+          - containerPort: 8000 
